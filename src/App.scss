@@ -31,10 +31,22 @@ body {
 }
 
 .listeMenu {
+  list-style-type: none;
   height: 50px;
   display: flex;
   align-items: center;
   width: 100%;
+}
+
+.lien {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+      color:#fff;
+    }
 }
 
 .liensNav {
@@ -281,3 +293,62 @@ body {
   }
 
 }
+
+/*
+/////////////
+// TOPSTREAMS //
+///////////
+*/
+
+.carteStream {
+  height: 420px;
+  width: 320px;
+  margin: 0 30px 30px 0;
+  border-radius:10px;
+  box-shadow: 2px 11px 36px -16px rgba(0,0,0,0.75);
+  transition: all 0.4s;
+
+  &:hover {
+    transform: translateY(-5px)
+  }
+
+  .titreCarteStream {
+    font-size: 21px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    width: 80%;
+    font-weight: 500;
+  }
+  .carteBodyStream {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+  }
+
+.txtStream {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+  .viewers {
+    margin-bottom: 20px;
+  }
+}
+
+
+@media screen and (max-width : $smallScreen + 'px') {
+
+.carteStream {
+  margin: 0 0 30px 0;
+}
+
+}
+
+

@@ -1,0 +1,283 @@
+$colorBlack : #17171B;
+
+$mediumScreen : 1200;
+$smallScreen : 559;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: F1F1f1;
+  font-family: sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+/*
+/////////////
+// HEADER //
+///////////
+*/
+.headerTop {
+  background: $colorBlack;
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.listeMenu {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.liensNav {
+  list-style-type: none;
+  padding: 0 20px;
+}
+
+.liensNav:nth-child(4) {
+  margin: 0 auto;
+  flex-shrink: 1;
+  width: 600px;
+}
+
+.logo {
+  margin-top: 5px;
+}
+
+.formSubmit {
+  display: flex;
+  flex-shrink: 1;
+}
+
+.logoLoupe {
+  width: 20px;
+}
+
+.inputRecherche {
+  width: 50%;
+  background: #fff;
+  border: 2px solid #fff;
+  border-top-left-radius: 5px;
+  outline: none;
+  padding: 5px;
+}
+
+.liensNav {
+  color: #fff;
+  font-size: 14px;
+
+  & button {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 4px 20px;
+    border: none;
+  }
+}
+
+.menuResBtn {
+  display: none;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  color: #fff;
+  width: 50px;
+  cursor: pointer;
+}
+
+.menuIco {
+  width: 25px;
+}
+
+/*
+/////////////
+// SIDEBAR //
+///////////
+*/
+
+.sidebar {
+  position: fixed;
+  top: 50px;
+  width: 239px;
+  background: $colorBlack ;
+  height: 100vh;
+}
+
+.titreSidebar {
+  padding: 30px 0 20px 0;
+  color: #efebf5;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.listeStream {
+  padding: 0 0 0 10px;
+  color: #efebf5
+}
+
+.containerFlexSidebar {
+  padding: 10px 15px 8px 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+
+    &:hover{
+      background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+.profilePicRonde {
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.streamUser {
+  color: #f1f1f1;
+  flex-basis: 50%;
+  overflow: hidden;
+  text-align: left;
+}
+
+.gameNameSidebar {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #aeabb6;
+  text-align: left;
+  margin-top: 5px;
+}
+.viewerRight {
+  color: #aeaeae;
+  flex-basis: 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.pointRouge {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-top: 6px;
+  margin-right: 3px;
+  background: crimson;
+}
+@media screen and (max-width : $mediumScreen + 'px') {
+
+  .sidebar{
+    display: none;
+  }
+
+}
+
+/*
+/////////////
+// GAMES //
+///////////
+*/
+
+.titreGames {
+  padding-top: 90px;
+  font-size: 50px;
+  font-weight: 300;
+  padding-left: 260px;
+  padding-bottom: 50px;
+}
+
+.flexAccueil {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 260px;
+}
+
+.carteGames {
+  height: 480px;
+  width: 280px;
+  margin: 0 30px 30px 0;
+  position: relative;
+  transition: all 0.4s;
+  border-radius: 10px;
+  box-shadow: 2px 11px 36px -16px rgba(0,0,0,0.75);
+
+  &:hover {
+    transform: translateY(-5px);
+  } 
+}
+
+.imgCarte {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.cardBodyGames {
+  height: 144px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.btnCarte {
+  height: 50px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #212529;
+  font-size: 14px;
+  line-height: 1.125;
+  border-radius: 5px;
+  padding: 2px 5px;
+  cursor: pointer;
+
+    &:hover {
+      text-decoration: none;
+      color:#fff;
+    }
+}
+
+.titreCartesGames {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 80%;
+  overflow: hidden;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+@media screen and (max-width : $mediumScreen + 'px') {
+
+ .titreGames {
+   padding-left: 0px;
+ }
+
+ .flexAccueil {
+   padding-left: 30px;
+ }
+
+}
+
+@media screen and (max-width : $smallScreen + 'px') {
+
+  .carteGames {
+    margin: 0 0 30px 0;
+  }
+  .flexAccueil{
+    padding-left: 0px;
+  }
+
+}
